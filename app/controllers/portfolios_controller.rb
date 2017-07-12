@@ -19,6 +19,21 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  def edit
+    set_portfolio_item
+  end
+
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
+    respond_to do |format|
+      if @portfolio_item.update(portfolio_item_params)
+        format.html { redirect_to portfolios_path, notice: 'This portfolio item was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_portfolio_item
