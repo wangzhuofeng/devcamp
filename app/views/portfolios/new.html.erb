@@ -27,6 +27,15 @@
     <%= form.text_area :thumb_image, id: :portfolio_item_thumb_image %>
   </div>
 
+  <ul>
+    <%= form.fields_for :technologies do |t| %>
+      <li>
+        <%= t.label :name %>
+        <%= t.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
   <div class="actions">
     <%= form.submit %>
   </div>
