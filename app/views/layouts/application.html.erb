@@ -20,7 +20,7 @@
       <%= link_to "Register", new_user_registration_path %>
     <% end %>
 
-    <%= render 'shared/nav' %>
+    <%= render 'shared/nav', location: "top" %>
     <%= yield %>
 
     <% if session[:source] %>
