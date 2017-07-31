@@ -1,2 +1,2 @@
 <h1>Pages#contact</h1>
-<p><%= number_to_phone "+85263514913" %></p>
+<p><%= number_to_phone(85263514913, pattern: /(\d{1,4})(\d{4})(\d{4})$/, area_code: true) %></p>
