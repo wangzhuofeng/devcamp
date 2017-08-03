@@ -13,4 +13,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: layout_name)
     end
   end
+
+  def copyright_generator
+    MarkAutoCopyright::Renderer.copyright 'GETMOREBIZONLINE', 'All rights reserved.'
+  end
 end

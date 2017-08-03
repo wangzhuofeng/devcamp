@@ -7,6 +7,12 @@ GIT
       popper_js (>= 1.9.9, < 2.0)
       sass (>= 3.4.19)
 
+GIT
+  remote: https://github.com/wangzhuofeng/mark_auto_copyright
+  revision: 97fb6ecfd675ac6ee86fdd847238ed50c75d2b36
+  specs:
+    mark_auto_copyright (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -200,6 +206,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
+  mark_auto_copyright!
   pg (~> 0.18)
   pry-byebug
   puma (~> 3.7)
