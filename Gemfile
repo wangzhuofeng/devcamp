@@ -57,3 +57,4 @@ gem 'devise', '~> 4.3'
 gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 gem 'jquery-rails'
 gem 'mark_auto_copyright', git: "https://github.com/wangzhuofeng/mark_auto_copyright"
+gem 'petergate', '~> 1.7', '>= 1.7.5'
