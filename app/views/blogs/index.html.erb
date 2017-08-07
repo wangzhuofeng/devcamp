@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <div class="col-sm-8 blog-main">
+  <p id="notice"><%= notice %></p>
   <p><%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %></p>
   <%= render @blogs %>
   <nav class="blog-pagination">
@@ -8,5 +7,3 @@
     <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
   </nav>
 </div><!-- /.blog-main -->
-
-
