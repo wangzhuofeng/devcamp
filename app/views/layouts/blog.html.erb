@@ -15,14 +15,7 @@
   <body>
     <%= render 'shared/blog_nav' %>
 
-    <!-- start of blog header -->
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Mark's Blog</h1>
-        <p class="lead blog-description">What I've been thinking about lately...</p>
-      </div>
-    </div>
-    <!-- end of blog header -->
+    <%= render 'shared/blog_masthead' %>
     <div class="container">
       <div class="row">
         <div class="col-sm-8 blog-main">
@@ -32,15 +25,10 @@
       </div><!-- /.row -->
     </div><!-- /.container -->
 
-    <% render 'shared/nav', location: "bottom" %>
+    <%= render 'shared/blog_footer' %>
 
     <%= source_helper('blog') %>
 
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
+    
   </body>
 </html>

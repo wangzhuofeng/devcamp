@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 <p><%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %></p>
+
 <%= render @blogs %>
 <nav class="blog-pagination">
-  <a class="btn btn-outline-primary" href="#">Older</a>
-  <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+  <a class="btn btn-outline-primary" href="<%= path_to_next_page @blogs %>">Older</a>
+  <a class="btn btn-outline-secondary" href="<%= path_to_prev_page @blogs %>">Newer</a>
 </nav>
