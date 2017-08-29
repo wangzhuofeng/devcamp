@@ -17,4 +17,42 @@ module ApplicationHelper
   def copyright_generator
     MarkAutoCopyright::Renderer.copyright 'GETMOREBIZONLINE', 'All rights reserved.'
   end
+
+  def nav_items
+    [
+      {
+        path: root_path,
+        title: 'Home'
+      },
+      {
+        path: blogs_path,
+        title: 'Blog'
+      },
+      {
+        path: portfolios_path,
+        title: 'Portfolio'
+      },
+      {
+        path: about_path,
+        title: 'About'
+      },
+      {
+        path: contact_path,
+        title: 'Contact'
+      }
+    ]
+  end
+
+  def nav_helper style = 'nav-link', tag_type
+    nav_links = ""
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}><a href='#{item[:path]}' class='#{style} #{active? item[:path]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+
+    nav_links.html_safe
+  end
+
+  def active? path
+    "active" if current_page? path
+  end
 end
